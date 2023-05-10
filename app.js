@@ -5,103 +5,103 @@ const songs = [{
                 id: "1",
                 songName: `On My Way <br> 
                 <div class="subtitle">Alan Walker</div>`,
-                poster: "img/1.jpg",
+                poster: "1.jpg",
             },
             {
                 id: "2",
                 songName: `Alan Walker-Fade <br> 
                 <div class="subtitle">Alan Walker</div>`,
-                poster: "img/2.jpg",
+                poster: "2.jpg",
             },
             {
                 id: "3",
                 songName: `Cartoon - On & On <br><div class="subtitle">Daniel Levi</div>`,
-                poster: "img/3.jpg",
+                poster: "3.jpg",
             },
             {
                 id: "4",
                 songName: `Warriyo - Mortals <br><div class="subtitle">Mortals</div>`,
-                poster: "img/4.jpg",
+                poster: "4.jpg",
             },
             {
                 id: "5",
                 songName: `Ertugrul Gazi <br><div class="subtitle">Ertugrul</div>`,
-                poster: "img/5.jpg",
+                poster: "5.jpg",
             },
             {
                 id: "6",
                 songName: `Electronic Music <br><div class="subtitle">Electro</div>`,
-                poster: "img/6.jpg",
+                poster: "6.jpg",
             },
             {
                 id: "7",
                 songName: `Agar Tum Sath Ho <br><div class="subtitle">Tamashaa</div>`,
-                poster: "img/7.jpg",
+                poster: "7.jpg",
             },
             {
                 id: "8",
                 songName: `Suna Hai <br><div class="subtitle">Neha Kakker</div>`,
-                poster: "img/8.jpg",
+                poster: "8.jpg",
             },
             {
                 id: "9",
                 songName: `Dilbar <br><div class="subtitle">Satyameva Jayate</div>`,
-                poster: "img/9.jpg",
+                poster: "9.jpg",
             },
             {
                 id: "10",
                 songName: `Duniya <br><div class="subtitle">Luka Chuppi</div>`,
-                poster: "img/10.jpg",
+                poster: "10.jpg",
             },
             {
                 id: "11",
                 songName: `Lagdi Lahore Di <br><div class="subtitle">Street Dancer 3D</div>`,
-                poster: "img/11.jpg",
+                poster: "11.jpg",
             },
             {
                 id: "12",
                 songName: `Putt Jatt Da <br><div class="subtitle">Putt Jatt Da</div>`,
-                poster: "img/12.jpg",
+                poster: "12.jpg",
             },
             {
                 id: "13",
                 songName: `Baarishein <br><div class="subtitle">Atif Aslam</div>`,
-                poster: "img/13.jpg",
+                poster: "13.jpg",
             },
             {
                 id: "14",
                 songName: `Vaaste <br><div class="subtitle">Dhvani Bhanushali</div>`,
-                poster: "img/14.jpg",
+                poster: "14.jpg",
             },
             {
                 id: "15",
                 songName: `Lut Gaye <br><div class="subtitle">Jubin Nautiyal</div>`,
-                poster: "img/15.jpg",
+                poster: "15.jpg",
             },
             {
                 id: "16",
                 songName: `Tu Meri Jindgi Hai <br><div class="subtitle">Jubin Nautiyal</div>`,
-                poster: "img/16.jpg",
+                poster: "16.jpg",
             },
             {
                 id: "17",
                 songName: `Batao Yaad Hai Tumko Wo Jab Dil Ko Churaya Tha <br><div class="subtitle">Rahat Fateh Ali Khan</div>`,
-                poster: "img/17.jpg",
+                poster: "17.jpg",
             },
             {
                 id: "18",
                 songName: `Mere Dhol Judaiyan <br><div class="subtitle">Ali Sethi Shae Gill</div>`,
-                poster: "img/18.jpg",
+                poster: "18.jpg",
             },
             {
                 id: "19",
                 songName: `Eh Munde Pagal Ne Saare <br><div class="subtitle">Ap Dhillon, Gurinder Gill, Shinda Kahlon</div>`,
-                poster: "img/19.jpg",
+                poster: "19.jpg",
             },
             {
                 id: "20",
                 songName: `Dunny 82K <br><div class="subtitle">Ap Dhillon, Gurinder Gill, Shinda Kahlon</div>`,
-                poster: "img/20.jpg",
+                poster: "20.jpg",
             }
     ]
 
@@ -195,12 +195,12 @@ Array.from(document.getElementsByClassName('playListPlay')).forEach((e) => {
     e.addEventListener('click', (el) => {
         index = el.target.id;
         // console.log(index);
-        music.src = `audio/${index}.mp3`;
-        poster_master_play.src = `img/${index}.jpg`;
+        music.src = `${index}.mp3`;
+        poster_master_play.src = `${index}.jpg`;
         music.play();
         masterPlay.classList.remove('bi-play-fill');
         masterPlay.classList.add('bi-pause-fill');
-        download_music.href = `audio/${index}.mp3`;
+        download_music.href = `${index}.mp3`;
         let songTitles = songs.filter((els) => {
             return els.id == index;
         });
@@ -297,8 +297,8 @@ back.addEventListener('click', () => {
     if(index < 1) {
         index = Array.from(document.getElementsByClassName('songItem')).length;
     }
-    music.src = `audio/${index}.mp3`;
-    poster_master_play.src = `img/${index}.jpg`;
+    music.src = `${index}.mp3`;
+    poster_master_play.src = `${index}.jpg`;
     music.play();
     masterPlay.classList.remove('bi-play-fill');
     masterPlay.classList.add('bi-pause-fill');
@@ -326,8 +326,8 @@ next.addEventListener('click', () => {
     if(index > Array.from(document.getElementsByClassName('songItem')).length) {
         index = 1;
     }
-    music.src = `audio/${index}.mp3`;
-    poster_master_play.src = `img/${index}.jpg`;
+    music.src = `${index}.mp3`;
+    poster_master_play.src = `${index}.jpg`;
     music.play();
     masterPlay.classList.remove('bi-play-fill');
     masterPlay.classList.add('bi-pause-fill');
@@ -414,12 +414,12 @@ const next_music = () => {
     } else {
         index++;
     }
-    music.src = `audio/${index}.mp3`;
-    poster_master_play.src = `img/${index}.jpg`;
+    music.src = `${index}.mp3`;
+    poster_master_play.src = `${index}.jpg`;
     music.play();
     masterPlay.classList.remove('bi-play-fill');
     masterPlay.classList.add('bi-pause-fill');
-    download_music.href = `audio/${index}.mp3`;
+    download_music.href = `${index}.mp3`;
     let songTitles = songs.filter((els) => {
         return els.id == index;
     });
@@ -441,12 +441,12 @@ const next_music = () => {
 
 const repeat_music = () => {
     index;
-    music.src = `audio/${index}.mp3`;
-    poster_master_play.src = `img/${index}.jpg`;
+    music.src = `${index}.mp3`;
+    poster_master_play.src = `${index}.jpg`;
     music.play();
     masterPlay.classList.remove('bi-play-fill');
     masterPlay.classList.add('bi-pause-fill');
-    download_music.href = `audio/${index}.mp3`;
+    download_music.href = `${index}.mp3`;
     let songTitles = songs.filter((els) => {
         return els.id == index;
     });
@@ -472,12 +472,12 @@ const random_music = () => {
     } else {
         index = Math.floor((Math.random() * songs.length) + 1);
     }
-    music.src = `audio/${index}.mp3`;
-    poster_master_play.src = `img/${index}.jpg`;
+    music.src = `${index}.mp3`;
+    poster_master_play.src = `${index}.jpg`;
     music.play();
     masterPlay.classList.remove('bi-play-fill');
     masterPlay.classList.add('bi-pause-fill');
-    download_music.href = `audio/${index}.mp3`;
+    download_music.href = `${index}.mp3`;
     let songTitles = songs.filter((els) => {
         return els.id == index;
     });
