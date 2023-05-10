@@ -619,8 +619,8 @@ header .song_side .content .buttons button:nth-child(2) {
 }
 
 header .song_side .content .buttons button:nth-child(2):hover {
-    background: #36e2ec;
-    color: #fff;
+    background: none;
+    color: #36e2ec;
 }
 
 header .song_side .popular_song {
