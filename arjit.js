@@ -5,78 +5,78 @@ const songs = [{
                 id: "1",
                 songName: `Naina Ashq Na Ho <br> 
                 <div class="subtitle">Arjit Singh</div>`,
-                poster: "img/arjit/1.jpg",
+                poster: "arjit.1.jpg",
             },
             {
                 id: "2",
                 songName: `Khairiyat(Sad) - Chhichhore <br> 
                 <div class="subtitle">Arjit Singh</div>`,
-                poster: "img/arjit/2.jpg",
+                poster: "arjit.2.jpg",
             },
             {
                 id: "3",
                 songName: `Desh Mere Bhuj <br><div class="subtitle">Arjit Singh</div>`,
-                poster: "img/arjit/3.jpg",
+                poster: "arjit.3.jpg",
             },
             {
                 id: "4",
                 songName: `Dhokha <br><div class="subtitle">Arjit Singh</div>`,
-                poster: "img/arjit/4.jpg",
+                poster: "arjit.4.jpg",
             },
             {
                 id: "5",
                 songName: `Tera Yaar Hoon Main - Sonu Ke Titu Ki Sweety <br><div class="subtitle">Arjit Singh</div>`,
-                poster: "img/arjit/5.jpg",
+                poster: "arjit.5.jpg",
             },
             {
                 id: "6",
                 songName: `Chunar <br><div class="subtitle">Arjit Singh</div>`,
-                poster: "img/arjit/6.jpg",
+                poster: "arjit.6.jpg",
             },
             {
                 id: "7",
                 songName: `Galti Se Mistake(Jagga Jasoos) <br><div class="subtitle">Arjit Singh</div>`,
-                poster: "img/arjit/7.jpg",
+                poster: "arjit.7.jpg",
             },
             {
                 id: "8",
                 songName: `Hamari Adhuri Kahani <br><div class="subtitle">Arjit Singh</div>`,
-                poster: "img/arjit/8.jpg",
+                poster: "arjit.8.jpg",
             },
             {
                 id: "9",
                 songName: `Neki Ki Raah - Traffic <br><div class="subtitle">Arjit Singh</div>`,
-                poster: "img/arjit/9.jpg",
+                poster: "arjit.9.jpg",
             },
             {
                 id: "10",
                 songName: `Humdard <br><div class="subtitle">Arjit Singh</div>`,
-                poster: "img/arjit/10.jpg",
+                poster: "arjit.10.jpg",
             },
             {
                 id: "11",
                 songName: `Mere Yaaraa - Sooryavanshi <br><div class="subtitle">Arjit Singh</div>`,
-                poster: "img/arjit/11.jpg",
+                poster: "arjit.11.jpg",
             },
             {
                 id: "12",
                 songName: `Nashe Si Chadh Gayi <br><div class="subtitle">Arjit Singh</div>`,
-                poster: "img/arjit/12.jpg",
+                poster: "arjit.12.jpg",
             },
             {
                 id: "13",
                 songName: `Ae Watan - Male(Raazi) <br><div class="subtitle">Arjit Singh</div>`,
-                poster: "img/arjit/13.jpg",
+                poster: "arjit.13.jpg",
             },
             {
                 id: "14",
                 songName: `Agar Tum Sath Ho <br><div class="subtitle">Arjit Singh</div>`,
-                poster: "img/arjit/14.jpg",
+                poster: "arjit.14.jpg",
             },
             {
                 id: "15",
                 songName: `Pachtaoge <br><div class="subtitle">Arjit Singh</div>`,
-                poster: "img/arjit/15.jpg",
+                poster: "arjit.15.jpg",
             }
     ]
 
@@ -168,12 +168,12 @@ Array.from(document.getElementsByClassName('playListPlay')).forEach((e) => {
     e.addEventListener('click', (el) => {
         index = el.target.id;
         // console.log(index);
-        music.src = `audio/arjit/${index}.mp3`;
-        poster_master_play.src = `img/arjit/${index}.jpg`;
+        music.src = `arjit.${index}.mp3`;
+        poster_master_play.src = `arjit.${index}.jpg`;
         music.play();
         masterPlay.classList.remove('bi-play-fill');
         masterPlay.classList.add('bi-pause-fill');
-        download_music.href = `audio/arjit/${index}.mp3`;
+        download_music.href = `arjit.${index}.mp3`;
         let songTitles = songs.filter((els) => {
             return els.id == index;
         });
@@ -270,8 +270,8 @@ back.addEventListener('click', () => {
     if(index < 1) {
         index = Array.from(document.getElementsByClassName('songItem')).length;
     }
-    music.src = `audio/arjit/${index}.mp3`;
-    poster_master_play.src = `img/arjit/${index}.jpg`;
+    music.src = `arjit.${index}.mp3`;
+    poster_master_play.src = `arjit.${index}.jpg`;
     music.play();
     masterPlay.classList.remove('bi-play-fill');
     masterPlay.classList.add('bi-pause-fill');
@@ -299,8 +299,8 @@ next.addEventListener('click', () => {
     if(index > Array.from(document.getElementsByClassName('songItem')).length) {
         index = 1;
     }
-    music.src = `audio/arjit/${index}.mp3`;
-    poster_master_play.src = `img/arjit/${index}.jpg`;
+    music.src = `arjit.${index}.mp3`;
+    poster_master_play.src = `arjit.${index}.jpg`;
     music.play();
     masterPlay.classList.remove('bi-play-fill');
     masterPlay.classList.add('bi-pause-fill');
@@ -387,12 +387,12 @@ const next_music = () => {
     } else {
         index++;
     }
-    music.src = `audio/arjit/${index}.mp3`;
-    poster_master_play.src = `img/arjit/${index}.jpg`;
+    music.src = `arjit.${index}.mp3`;
+    poster_master_play.src = `arjit.${index}.jpg`;
     music.play();
     masterPlay.classList.remove('bi-play-fill');
     masterPlay.classList.add('bi-pause-fill');
-    download_music.href = `audio/arjit/${index}.mp3`;
+    download_music.href = `arjit.${index}.mp3`;
     let songTitles = songs.filter((els) => {
         return els.id == index;
     });
@@ -414,12 +414,12 @@ const next_music = () => {
 
 const repeat_music = () => {
     index;
-    music.src = `audio/arjit/${index}.mp3`;
-    poster_master_play.src = `img/arjit/${index}.jpg`;
+    music.src = `arjit.${index}.mp3`;
+    poster_master_play.src = `arjit.${index}.jpg`;
     music.play();
     masterPlay.classList.remove('bi-play-fill');
     masterPlay.classList.add('bi-pause-fill');
-    download_music.href = `audio/arjit/${index}.mp3`;
+    download_music.href = `arjit.${index}.mp3`;
     let songTitles = songs.filter((els) => {
         return els.id == index;
     });
@@ -445,12 +445,12 @@ const random_music = () => {
     } else {
         index = Math.floor((Math.random() * songs.length) + 1);
     }
-    music.src = `audio/arjit/${index}.mp3`;
-    poster_master_play.src = `img/arjit/${index}.jpg`;
+    music.src = `arjit.${index}.mp3`;
+    poster_master_play.src = `arjit.${index}.jpg`;
     music.play();
     masterPlay.classList.remove('bi-play-fill');
     masterPlay.classList.add('bi-pause-fill');
-    download_music.href = `audio/arjit/${index}.mp3`;
+    download_music.href = `arjit.${index}.mp3`;
     let songTitles = songs.filter((els) => {
         return els.id == index;
     });
