@@ -614,8 +614,8 @@ header .song_side .content .buttons button:hover {
 }
 
 header .song_side .content .buttons button:nth-child(2) {
-    background: none;
-    color: #36e2ec;
+    background: #36e2ec;
+    color: #fff;
 }
 
 header .song_side .content .buttons button:nth-child(2):hover {
