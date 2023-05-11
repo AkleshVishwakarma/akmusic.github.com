@@ -221,6 +221,37 @@ Array.from(document.getElementsByClassName('playListPlay')).forEach((e) => {
     });
 });
 
+// Play Button 
+
+let playbutton = document.getElementById('playbutton');
+
+playbutton.addEventListener('click', () => {
+        music.src = `1.mp3`;
+        poster_master_play.src = `1.jpg`;
+        music.play();
+        masterPlay.classList.remove('bi-play-fill');
+        masterPlay.classList.add('bi-pause-fill');
+        download_music.href = `1.mp3`;
+        let songTitles = songs.filter((els) => {
+            return els.id == '1';
+        });
+
+        songTitles.forEach((elss) => {
+            let { songName } = elss;
+            title.innerHTML = songName;
+            download_music.setAttribute('download', songName);
+        });
+
+        makeAllBackground();
+        Array.from(document.getElementsByClassName('songItem'))[index-1].style.background = 'rgb(105, 105, 105, .1)';
+
+        makeAllPlays();
+        el.target.classList.remove('bi-play-circle-fill');
+        el.target.classList.add('bi-pause-circle-fill');
+        wave.classList.add('active1');
+});
+
+// End
 
 let currentStart = document.getElementById('currentStart');
 let currentEnd = document.getElementById('currentEnd');
