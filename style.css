@@ -869,3 +869,20 @@ header .right_bx1 h3 {
     border-radius: 5px 0px 0px 5px;
     font-size: 13px;
 }
+
+/* New */
+
+header .rights {
+    position: absolute;
+    background: #36e2ec;
+    color: #000;
+    bottom: 0;
+    width: 100%;
+    height: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 23px;
+    font-family: monospace;
+}
