@@ -9,7 +9,7 @@ const songs = [{
             },
             {
                 id: "2",
-                songName: `Khairiyat(Sad) - Chhichhore <br> 
+                songName: `Khairiyat - Chhichhore <br> 
                 <div class="subtitle">Arjit Singh</div>`,
                 poster: "arjit.2.jpg",
             },
@@ -25,7 +25,7 @@ const songs = [{
             },
             {
                 id: "5",
-                songName: `Tera Yaar Hoon Main - Sonu Ke Titu Ki Sweety <br><div class="subtitle">Arjit Singh</div>`,
+                songName: `Tera Yaar Hoon Main <br><div class="subtitle">Arjit Singh</div>`,
                 poster: "arjit.5.jpg",
             },
             {
